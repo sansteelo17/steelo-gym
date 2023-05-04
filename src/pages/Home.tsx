@@ -38,8 +38,8 @@ const Home = ({ setSelectedPage }: Props) => {
           >
             <div className="relative">
               <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
-                <h2 className="font-montserrat font-extrabold text-7xl">STEELOGYM</h2>
-                <p className="font-montserrat font-extralight text-4xl">one of a kind fitness.</p>
+                <h2 className="font-montserrat font-extrabold text-5xl md:text-7xl">STEELOGYM</h2>
+                <p className="font-montserrat font-extralight text-3xl md:text-4xl">one of a kind fitness.</p>
               </div>
             </div>
 
