@@ -6,9 +6,9 @@ import useMediaQuery from '@/hooks/useMediaQuery';
 import ActionButton from './ActionButton';
 
 type Props = {
-    selectedPage: SelectedPage,
-    setSelectedPage: (value: SelectedPage) => void,
-    isTopOfPage: boolean
+    isTopOfPage: boolean;
+    selectedPage: SelectedPage;
+    setSelectedPage: (value: SelectedPage) => void;
 }
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
@@ -16,14 +16,14 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
 
  const [isMenuToggled , setIsMenuToggled]= useState<boolean>(false)
- const navbarBackground = isTopOfPage ? '' : 'bg-primary-100 drop-shadow'
+ const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
 
   return (
     <nav>
-        <div className={`${flexBetween} ${navbarBackground} fixed top-0 z-30 w-full py-6`}>
+        <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
          <div className={`${flexBetween} mx-auto w-5/6`}>
             <div className={`${flexBetween} w-full gap-16`}>
-                <h1 className='font-montserrat border-l border-b border-primary-300 py-1.5 px-2 rounded-md'>STEELO<span className='text-primary-500'>GYM</span></h1>
+                <h1 className='font-montserrat font-bold border-l border-b border-primary-300 py-1.5 px-2 rounded-md'>STEELO<span className='text-primary-500'>GYM</span></h1>
 
                {isAboveMediumScreens ? (
                  <div className={`${flexBetween} w-full`}>
